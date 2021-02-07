@@ -52,7 +52,7 @@ int main(int argc, char **argv) {
 			}
 		}
 
-		#pragma omp parallel for default(none) shared(cur_lowest_hw)
+		#pragma omp parallel for default(none) shared(num_threads, random_x, even_offset, wanted_two_adicity, cout, cur_lowest_hw)
 		for(int i = 0; i < num_threads; i++) {
 			ZZ* cur_start = &random_x[i * 10000];
 
