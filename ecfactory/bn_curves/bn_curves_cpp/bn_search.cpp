@@ -10,7 +10,7 @@ using namespace std;
 using namespace NTL;
 
 #define SUBGROUP_SECURE
-#define MAX_Q_BITS 255
+#define MAX_Q_BITS 384
 #define LOGFILE "./LOG.txt"
 
 /*
@@ -37,7 +37,7 @@ int main(int argc, char **argv) {
 	long wanted_two_adicity = atoi(argv[3]);
 
 	/* |x| ~ 64 bits so that |q| = 4 * |x| ~ 256 bits */
-	long num_x_bits = 63;
+	long num_x_bits = 95;
 	long cur_lowest_hw = -1;
 
 	int num_threads = omp_get_max_threads();
